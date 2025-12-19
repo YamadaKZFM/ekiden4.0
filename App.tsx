@@ -38,7 +38,7 @@ const App: React.FC = () => {
           <div className="mb-2 relative">
             <div className="absolute inset-0 blur-2xl bg-white/10 rounded-full scale-150"></div>
             <img
-              src="./images/nca_logo.png"
+              src="./images/nca_logo.jpg"
               alt="NCA"
               className="h-20 w-auto object-contain relative z-10 drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]"
             />
@@ -156,7 +156,7 @@ const App: React.FC = () => {
           <div className="relative z-10 mb-4 group">
             <div className="absolute inset-0 blur-xl bg-white/5 rounded-full scale-150 group-hover:bg-white/10 transition-all"></div>
             <img
-              src="./images/nca_logo.png"
+              src="./images/nca_logo.jpg"
               alt="NCA"
               className="h-12 w-auto object-contain relative z-10 opacity-60 group-hover:opacity-100 transition-opacity drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
             />
