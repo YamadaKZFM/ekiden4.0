@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { RelaySection } from '../types';
-import { X, Map, Quote, Instagram, Timer, School, MapPin } from 'lucide-react';
+import { X, Map, Quote, Instagram, Timer, School, MapPin, ExternalLink, Camera, Droplets } from 'lucide-react';
 
 interface DetailModalProps {
   data: RelaySection | null;
@@ -81,10 +81,10 @@ export const DetailModal: React.FC<DetailModalProps> = ({ data, onClose }) => {
                    <div className="absolute top-0 right-0 w-20 h-20 bg-white/5 blur-2xl -mr-10 -mt-10 rounded-full"></div>
 
                   <div className="flex items-start gap-4 relative z-10">
-                    <img 
-                      src={runner.image} 
-                      alt={runner.name} 
-                      className="w-14 h-14 rounded-full object-cover bg-stone-900 border border-stone-700 grayscale" 
+                    <img
+                      src={runner.image}
+                      alt={runner.name}
+                      className="w-20 h-20 rounded-full object-cover bg-stone-900 border border-stone-700 grayscale"
                     />
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between">
@@ -127,6 +127,36 @@ export const DetailModal: React.FC<DetailModalProps> = ({ data, onClose }) => {
               ))}
             </div>
           </div>
+
+          {/* Spot Links Section */}
+          {data.spotLinks && data.spotLinks.length > 0 && (
+            <div>
+              <h2 className="text-xs font-bold text-stone-500 uppercase tracking-widest mb-4 border-b border-stone-800 pb-2">
+                Spots
+              </h2>
+              <div className="flex flex-wrap gap-3">
+                {data.spotLinks.map((spot, index) => (
+                  <a
+                    key={index}
+                    href={spot.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-stone-900 hover:bg-stone-800 border border-stone-700 hover:border-stone-500 px-4 py-3 rounded-lg transition-all group"
+                  >
+                    {spot.label.includes('写真') ? (
+                      <Camera className="w-4 h-4 text-amber-400" />
+                    ) : (
+                      <Droplets className="w-4 h-4 text-blue-400" />
+                    )}
+                    <span className="text-sm font-medium text-stone-300 group-hover:text-white">
+                      {spot.label}
+                    </span>
+                    <ExternalLink className="w-3 h-3 text-stone-500 group-hover:text-stone-300" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Description & Logistics Grid */}
           <div className="grid gap-6">

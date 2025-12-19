@@ -7,6 +7,11 @@ export interface Runner {
   hobby?: string; // e.g. "Sauna, Coffee"
 }
 
+export interface SpotLink {
+  label: string; // e.g., "給水所", "応援スポット", "写真スポット"
+  url: string; // External URL
+}
+
 export interface RelaySection {
   id: number;
   section: string; // e.g., "1区"
@@ -18,4 +23,5 @@ export interface RelaySection {
   coordinates: string; // Lat,Lng string for Google Maps
   logistics: string; // Parking/Car info
   timeEstimation?: string; // e.g., "7:30 - 8:40"
+  spotLinks?: SpotLink[]; // Links to water stations, cheer spots, photo spots
 }
