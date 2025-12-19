@@ -19,7 +19,8 @@ export interface RelaySection {
   runners: Runner[]; // Changed from simple string to structured array
   distance: string; // e.g., "10.2km"
   description: string; // Course notes
-  mapImage: string; // Path to local image
+  mapImage: string; // Path to local image (たすき受け渡し場所)
+  routeImages?: string[]; // Route guide images (ルート案内画像)
   coordinates: string; // Lat,Lng string for Google Maps
   logistics: string; // Parking/Car info
   timeEstimation?: string; // e.g., "7:30 - 8:40"

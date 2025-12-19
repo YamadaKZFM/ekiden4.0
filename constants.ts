@@ -157,6 +157,7 @@ export const RELAY_DATA: RelaySection[] = [
     timeEstimation: "11:40 - 12:55",
     description: "写真通りに直進・浜須賀信号左。湘南大橋。",
     mapImage: "./images/map_sec5.jpg",
+    routeImages: ["./images/route_sec5.jpg"],
     coordinates: "35°19'13.9048\"N 139°25'36.7018\"E",
     logistics: "【IJ→車へ】U→車へ。",
     spotLinks: [
@@ -216,8 +217,9 @@ export const RELAY_DATA: RelaySection[] = [
     ],
     distance: "8.1km",
     timeEstimation: "13:40 - 14:30",
-    description: "一番心配な区間。給水所前（旧東海道）。",
+    description: "一番心配な区間。給水所前（旧東海道）。歩道が上。",
     mapImage: "./images/map_sec7.jpg",
+    routeImages: ["./images/route_sec6_5_1.jpg", "./images/route_sec6_5_2.jpg"],
     coordinates: "35°24'10.5383\"N 139°31'3.086\"E",
     logistics: "【MN→車へ】りさ、SHOHEI、辻堂でK,Tシンジ号が合流。",
     spotLinks: [
@@ -249,6 +251,7 @@ export const RELAY_DATA: RelaySection[] = [
     timeEstimation: "14:30 - 15:30",
     description: "写真通りに直進。保土ヶ谷駅の街並み。",
     mapImage: "./images/map_sec8.jpg",
+    routeImages: ["./images/route_sec7.jpg"],
     coordinates: "35°26'19.788\"N 139°35'6.1012\"E",
     logistics: "【OP→車へ】8→9から、shinji号チームは全員電車。しんじは車を置きに帰る。",
     spotLinks: [
@@ -306,6 +309,7 @@ export const RELAY_DATA: RelaySection[] = [
     timeEstimation: "16:40 - 17:50",
     description: "六郷橋を渡り階段下る・六郷橋北詰交差点左・大森警察署前。六郷橋。",
     mapImage: "./images/map_sec10.jpg",
+    routeImages: ["./images/route_sec9.jpg"],
     coordinates: "35°32'29.8417\"N 139°41'57.1405\"E",
     logistics: "電車で先回りで日本橋で下ろしてもらう。"
   },
