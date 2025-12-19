@@ -52,11 +52,11 @@ const App: React.FC = () => {
       {/* Intro Text: High Contrast */}
       <div className="relative z-10 px-6 py-10 text-center">
         <p className="font-bold text-2xl leading-tight mb-4 tracking-tight">
-          スポーツを<br/>もっと自分らしく。
+          箱根駅伝<br/>by NCA TOKYO
         </p>
         <p className="font-serif text-xs leading-7 text-stone-400">
-          選ばれし速い学生だけの“憧れの舞台”ではない。<br/>
-          伝統に敬意を払い、<span className="text-white border-b border-white pb-0.5">再構築する。</span>
+          NCA TOKYOが創る、もうひとつの箱根。。<br/>
+          箱根•芦ノ湖から大手町の道を、<span className="text-white border-b border-white pb-0.5">24人の学生が襷で繋ぎます。</span>
         </p>
       </div>
 
