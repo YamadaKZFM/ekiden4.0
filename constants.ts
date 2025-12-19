@@ -196,7 +196,7 @@ export const RELAY_DATA: RelaySection[] = [
     ]
   },
   {
-    id: 7,
+    id: 6.5,
     section: "6.5区",
     label: "藤沢 〜 東戸塚駅",
     runners: [
@@ -228,7 +228,7 @@ export const RELAY_DATA: RelaySection[] = [
     ]
   },
   {
-    id: 8,
+    id: 7,
     section: "7区",
     label: "東戸塚駅 〜 横浜駅",
     runners: [
@@ -259,7 +259,7 @@ export const RELAY_DATA: RelaySection[] = [
     ]
   },
   {
-    id: 9,
+    id: 8,
     section: "8区",
     label: "横浜駅 〜 川崎駅(稲毛神社)",
     runners: [
@@ -286,7 +286,7 @@ export const RELAY_DATA: RelaySection[] = [
     logistics: "【QR→電車】QR→電車。"
   },
   {
-    id: 10,
+    id: 9,
     section: "9区",
     label: "川崎駅 〜 新馬場駅(品川神社)",
     runners: [
@@ -314,7 +314,7 @@ export const RELAY_DATA: RelaySection[] = [
     logistics: "電車で先回りで日本橋で下ろしてもらう。"
   },
   {
-    id: 11,
+    id: 10,
     section: "10区",
     label: "新馬場駅 〜 大手町",
     runners: [
