@@ -55,7 +55,7 @@ const App: React.FC = () => {
           箱根駅伝<br/>by NCA TOKYO
         </p>
         <p className="font-serif text-xs leading-7 text-stone-400">
-          NCA TOKYOが創る、もうひとつの箱根。。<br/>
+          NCA TOKYOが創る、もうひとつの箱根<br/>
           箱根•芦ノ湖から大手町の道を、<span className="text-white border-b border-white pb-0.5">24人の学生が襷で繋ぎます。</span>
         </p>
       </div>
