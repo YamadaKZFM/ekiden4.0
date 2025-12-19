@@ -74,7 +74,7 @@ export const RELAY_DATA: RelaySection[] = [
         name: "松本 美沙希",
         image: "./images/misaki.jpg",
         message: "笑顔とトークでみんなを虜にするおもろ大富豪タイプ。",
-        instagramId: "misaki_smile",
+        instagramId: "misakiiii33",
         hobby: "立教大学"
       },
       {
@@ -181,7 +181,7 @@ export const RELAY_DATA: RelaySection[] = [
         name: "小川 拓海",
         image: "./images/takumi.jpg",
         message: "勢いと物語の渦中にいつもいる不死身のDJ。恋愛モンスター。",
-        instagramId: "takumi_dj",
+        instagramId: "___otak___",
         hobby: "国際基督教大学"
       }
     ],
@@ -204,7 +204,7 @@ export const RELAY_DATA: RelaySection[] = [
         name: "菊池 康介",
         image: "./images/kosuke.jpg",
         message: "行動予測不能で声はソプラノ。ISTP(巨匠)。",
-        instagramId: "kosuke_soprano",
+        instagramId: "realkosuke",
         hobby: "神戸市外国語大学"
       },
       {
@@ -236,14 +236,14 @@ export const RELAY_DATA: RelaySection[] = [
         name: "川島 泰葉",
         image: "./images/yasuha.jpg",
         message: "なんでもやってみる素敵なポジティブガールは面白い！デビル天使。",
-        instagramId: "yasuha_positive",
+        instagramId: "8su__ha",
         hobby: "立教大学"
       },
       {
         name: "根岸 楓香",
         image: "./images/fuka.jpg",
         message: "明るくみんなを応援するチアガール。あの笑顔で応援されれば誰もイチコロ。",
-        instagramId: "fuka_cheer",
+        instagramId: "fuka.8u_",
         hobby: "立教大学"
       }
     ],
@@ -322,7 +322,7 @@ export const RELAY_DATA: RelaySection[] = [
         name: "西川 咲季",
         image: "./images/saki.jpg",
         message: "ホントは速いのにファンランを貫くNCAのマザー的存在。",
-        instagramId: "saki_mother",
+        instagramId: "sakiiii_cha",
         hobby: "栄養士"
       },
       {
