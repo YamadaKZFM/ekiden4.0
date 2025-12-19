@@ -128,6 +128,26 @@ export const DetailModal: React.FC<DetailModalProps> = ({ data, onClose }) => {
             </div>
           </div>
 
+          {/* Route Images Section */}
+          {data.routeImages && data.routeImages.length > 0 && (
+            <div>
+              <h2 className="text-xs font-bold text-stone-500 uppercase tracking-widest mb-4 border-b border-stone-800 pb-2">
+                Route Guide
+              </h2>
+              <div className="space-y-4">
+                {data.routeImages.map((img, index) => (
+                  <div key={index} className="rounded-sm overflow-hidden border border-stone-800">
+                    <img
+                      src={img}
+                      alt={`Route guide ${index + 1} for ${data.section}`}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Spot Links Section */}
           {data.spotLinks && data.spotLinks.length > 0 && (
             <div>
