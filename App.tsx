@@ -85,7 +85,7 @@ const App: React.FC = () => {
 
         {/* Charity Section: Monotone with minimal accent if needed, keeping it cool */}
         <div className="group bg-stone-950 rounded-none border border-white/20 overflow-hidden relative transition-all duration-500 hover:border-white/50">
-           
+
            <div className="p-6 relative z-10">
               <div className="flex justify-between items-start mb-4">
                 <div className="inline-block bg-white text-black text-[10px] font-black px-2 py-1 uppercase tracking-wider">
@@ -97,50 +97,108 @@ const App: React.FC = () => {
               <h2 className="font-serif text-3xl font-bold text-white leading-none mb-2 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] transition-all">
                 Charity 5KM Run
               </h2>
-              <p className="text-xs text-stone-400 mb-8 font-serif">
-                移動経費支援のためのチャリティーラン。
+              <p className="text-xs text-stone-400 mb-6 font-serif">
+                応援旗・ゼッケン・新聞号外などの制作費、移動に伴う経費のためチャリティーでのご支援を募っています。
               </p>
+
+              {/* Special Guest Section */}
+              <div className="mb-8 p-4 bg-black/50 border border-lime-400/30 rounded-sm">
+                <div className="text-[10px] text-lime-400 font-bold tracking-widest mb-2">SPECIAL GUEST</div>
+                <div className="flex gap-4 items-start">
+                  <div className="w-16 h-16 bg-stone-800 rounded-full overflow-hidden flex-shrink-0 border border-lime-400/50">
+                    <img
+                      src="./images/kansuke.jpg"
+                      alt="Kansuke Morihashi"
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[10px] text-stone-500 mb-1">Nike Running Coach</p>
+                    <h3 className="text-white font-bold text-lg leading-tight">森橋 勘助</h3>
+                    <p className="text-[10px] text-lime-400 font-mono">Kansuke Morihashi</p>
+                  </div>
+                </div>
+                <p className="text-xs text-stone-400 mt-3 leading-relaxed">
+                  大東文化大学出身。箱根駅伝では"花の二区"を走った経験を持つ。現在は080TOKYOのディレクターとして活動。
+                </p>
+                <p className="text-xs text-white mt-2 font-medium">
+                  ゲストとして一緒に走っていただきます！
+                </p>
+              </div>
 
               <div className="grid gap-6">
                  {/* For Runners */}
-                 <div className="relative pl-4 border-l border-white/30">
-                    <h3 className="text-white font-bold text-sm mb-2 uppercase tracking-wide">
-                       Runners
+                 <div className="relative pl-4 border-l border-lime-400/50">
+                    <h3 className="text-lime-400 font-bold text-sm mb-3 uppercase tracking-wide">
+                       Charity 5KM Runに参加する方
                     </h3>
-                    <div className="space-y-1 text-sm text-stone-400 font-mono">
+                    <div className="space-y-2 text-sm text-stone-400">
                        <div className="flex items-center gap-2">
                           <Clock className="w-3 h-3 text-white" />
-                          <span>17:30 @ Otemachi</span>
+                          <span className="font-mono">17:30 @ 大手町駅</span>
                        </div>
                        <div className="flex items-center gap-2">
                           <MapPin className="w-3 h-3 text-white" />
-                          <span>5km (Imperial Palace)</span>
+                          <span>読売新聞前・箱根ゴール石碑前</span>
+                       </div>
+                       <div className="text-xs text-stone-500 mt-2">
+                         皇居1周｜約5km<br/>
+                         19:00〜選手の到着を迎えます<br/>
+                         <span className="text-white">参加無料</span> / ペース別グループあり
                        </div>
                     </div>
                  </div>
 
                  {/* For Spectators */}
                  <div className="relative pl-4 border-l border-white/30">
-                    <h3 className="text-white font-bold text-sm mb-2 uppercase tracking-wide">
-                       Spectators
+                    <h3 className="text-white font-bold text-sm mb-3 uppercase tracking-wide">
+                       学生のゴールを見届ける方
                     </h3>
-                    <div className="space-y-1 text-sm text-stone-400 font-mono">
+                    <div className="space-y-2 text-sm text-stone-400">
                        <div className="flex items-center gap-2">
                           <Clock className="w-3 h-3 text-white" />
-                          <span>18:30 @ Otemachi</span>
+                          <span className="font-mono">18:30 @ 大手町</span>
                        </div>
                        <div className="flex items-center gap-2">
-                          <Banknote className="w-3 h-3 text-white" />
-                          <span>Donation: ¥500~</span>
+                          <MapPin className="w-3 h-3 text-white" />
+                          <span>読売新聞前・箱根ゴール石碑前</span>
+                       </div>
+                       <div className="text-xs text-stone-500 mt-2">
+                         選手のゴールの瞬間を、<br/>
+                         <span className="text-white">FINISH LINE</span>で共に迎えましょう。
                        </div>
                     </div>
                  </div>
               </div>
-              
-              <div className="mt-8 pt-6 border-t border-white/10 text-center">
-                 <p className="text-xs font-mono text-white inline-block border border-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors">
-                    GOAL: ¥40,000
-                 </p>
+
+              {/* Donation Info */}
+              <div className="mt-8 pt-6 border-t border-white/10">
+                <div className="text-center mb-4">
+                  <p className="text-xs font-mono text-white inline-block border border-white px-6 py-2 rounded-full">
+                    目標金額: ¥40,000
+                  </p>
+                </div>
+                <p className="text-xs text-stone-400 text-center leading-relaxed">
+                  <span className="text-lime-400 font-bold">500円〜</span>（お気持ちで）ご支援いただいた方には当日、<br/>
+                  オリジナル応援用の手旗をお渡しします。<br/>
+                  <span className="text-stone-500 text-[10px]">※数量限定（高額支援の方から優先）</span>
+                </p>
+              </div>
+
+              {/* Instagram Link */}
+              <div className="mt-6 text-center">
+                <a
+                  href="https://www.instagram.com/p/DSZatAwkz2p/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs text-stone-500 hover:text-white transition-colors"
+                >
+                  <span>詳細はInstagramで</span>
+                  <Zap className="w-3 h-3" />
+                </a>
               </div>
            </div>
         </div>
