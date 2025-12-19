@@ -14,18 +14,36 @@ const App: React.FC = () => {
       {/* Background Ambience */}
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-stone-900/40 via-black to-black z-0" />
 
-      {/* Sticky Header: Minimalist Black & White */}
-      <header className="sticky top-0 z-20 bg-black/80 backdrop-blur-xl border-b border-white/10 px-4 py-3">
-        <div className="flex flex-col items-center justify-center text-center">
-          {/* Logo Replacement - Increased size for better visibility */}
-          <div className="mb-1.5">
-             <img 
-               src="./images/nca_logo.png" 
-               alt="NCA" 
-               className="h-16 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]"
-             />
+      {/* Sticky Header: Minimalist Black & White with Wave Design */}
+      <header className="sticky top-0 z-20 bg-black/90 backdrop-blur-xl border-b border-white/10 overflow-hidden">
+        {/* Wave Lines Background Animation */}
+        <div className="absolute inset-0 opacity-20">
+          <svg className="w-full h-full" viewBox="0 0 400 100" preserveAspectRatio="none">
+            {[...Array(12)].map((_, i) => (
+              <path
+                key={i}
+                d={`M0 ${50 + i * 4} Q100 ${30 + i * 4 + Math.sin(i) * 10} 200 ${50 + i * 4} T400 ${50 + i * 4}`}
+                fill="none"
+                stroke="white"
+                strokeWidth="0.5"
+                className="animate-pulse"
+                style={{ animationDelay: `${i * 0.1}s` }}
+              />
+            ))}
+          </svg>
+        </div>
+
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-4">
+          {/* NCA Logo - Larger with glow effect */}
+          <div className="mb-2 relative">
+            <div className="absolute inset-0 blur-2xl bg-white/10 rounded-full scale-150"></div>
+            <img
+              src="./images/nca_logo.png"
+              alt="NCA"
+              className="h-20 w-auto object-contain relative z-10 drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]"
+            />
           </div>
-          <span className="text-[10px] font-bold tracking-[0.4em] text-stone-500 uppercase">
+          <span className="text-[10px] font-bold tracking-[0.5em] text-stone-400 uppercase">
             Hakone Relay 2025
           </span>
         </div>
@@ -127,17 +145,28 @@ const App: React.FC = () => {
            </div>
         </div>
 
-        <footer className="text-center py-12 flex flex-col items-center">
-           <div className="mb-4 opacity-50 hover:opacity-100 transition-opacity">
-              <img 
-               src="./images/nca_logo.png" 
-               alt="NCA" 
-               className="h-8 w-auto object-contain"
-             />
-           </div>
-           <p className="text-[10px] text-stone-600 uppercase tracking-widest">
-             Tokyo Hakone Round-Trip College Ekiden Race
-           </p>
+        <footer className="text-center py-16 flex flex-col items-center relative overflow-hidden">
+          {/* Circular Pattern Background */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-5">
+            <div className="w-64 h-64 rounded-full border border-white animate-spin" style={{ animationDuration: '30s' }}></div>
+            <div className="absolute w-48 h-48 rounded-full border border-white animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}></div>
+            <div className="absolute w-32 h-32 rounded-full border border-white animate-spin" style={{ animationDuration: '20s' }}></div>
+          </div>
+
+          <div className="relative z-10 mb-4 group">
+            <div className="absolute inset-0 blur-xl bg-white/5 rounded-full scale-150 group-hover:bg-white/10 transition-all"></div>
+            <img
+              src="./images/nca_logo.png"
+              alt="NCA"
+              className="h-12 w-auto object-contain relative z-10 opacity-60 group-hover:opacity-100 transition-opacity drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+            />
+          </div>
+          <p className="text-[10px] text-stone-600 uppercase tracking-widest relative z-10">
+            Tokyo Hakone Round-Trip College Ekiden Race
+          </p>
+          <p className="text-[9px] text-stone-700 mt-2 font-mono relative z-10">
+            NCA × 2025
+          </p>
         </footer>
       </main>
 
