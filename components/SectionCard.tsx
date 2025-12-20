@@ -1,6 +1,6 @@
 import React from 'react';
 import { RelaySection } from '../types';
-import { ArrowRight, Circle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface SectionCardProps {
   data: RelaySection;
@@ -36,14 +36,17 @@ export const SectionCard: React.FC<SectionCardProps> = ({ data, onClick }) => {
               </span>
            </div>
 
-           {/* Runners Names - Text Only for cleanliness */}
-           <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+           {/* Runners with Photos */}
+           <div className="flex flex-wrap items-center gap-3 mt-1">
               {data.runners.map((runner, i) => (
-                <div key={i} className="flex items-center gap-1.5">
-                   {/* Tiny dot indicator instead of image for minimal list view */}
-                   <Circle className="w-1.5 h-1.5 fill-white text-white" />
+                <div key={i} className="flex items-center gap-2">
+                   <img
+                     src={runner.image}
+                     alt={runner.name}
+                     className="w-10 h-10 rounded-full object-cover bg-stone-800 border border-stone-700"
+                   />
                    <span className="text-xs font-medium text-white tracking-wide">
-                     {runner.name.split(' ')[0]} {/* Display First Name/Surname only for compactness */}
+                     {runner.name.split(' ')[0]}
                    </span>
                 </div>
               ))}
