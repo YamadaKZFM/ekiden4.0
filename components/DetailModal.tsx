@@ -111,13 +111,13 @@ export const DetailModal: React.FC<DetailModalProps> = ({ data, onClose }) => {
                       <div className="flex items-center justify-between">
                         <span className="font-serif text-lg font-bold text-white">{runner.name}</span>
                         {runner.instagramId && (
-                          <a 
+                          <a
                             href={`https://instagram.com/${runner.instagramId}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-stone-500 hover:text-white transition-colors"
+                            className="w-10 h-10 flex items-center justify-center rounded-full bg-stone-800 hover:bg-stone-700 border border-stone-600 transition-colors"
                           >
-                            <Instagram className="w-4 h-4" />
+                            <Instagram className="w-5 h-5 text-white" />
                           </a>
                         )}
                       </div>
