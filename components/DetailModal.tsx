@@ -21,7 +21,12 @@ export const DetailModal: React.FC<DetailModalProps> = ({ data, onClose }) => {
 
   if (!data) return null;
 
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.coordinates)}`;
+  // 出発場所 (Start point)
+  const startMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.coordinates)}`;
+  // たすき受け渡し場所 (Handover point)
+  const handoverMapsUrl = data.handoverCoordinates
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.handoverCoordinates)}`
+    : null;
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-black animate-in slide-in-from-bottom duration-300 text-white">
@@ -34,7 +39,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ data, onClose }) => {
           </div>
           <h1 className="text-sm font-bold text-stone-300 mt-1">{data.label}</h1>
         </div>
-        <button 
+        <button
           onClick={onClose}
           className="w-10 h-10 flex items-center justify-center rounded-full bg-stone-900 hover:bg-stone-800 border border-stone-800 transition-colors"
         >
@@ -44,26 +49,42 @@ export const DetailModal: React.FC<DetailModalProps> = ({ data, onClose }) => {
 
       {/* Content */}
       <div className="flex-1 overflow-y-auto overflow-x-hidden bg-black pb-24">
-        
-        {/* Map Area */}
+
+        {/* Map Area - たすき受け渡し場所 */}
         <div className="w-full border-b border-stone-800 bg-stone-950 relative">
+          <div className="absolute top-3 left-3 z-10 bg-black/70 px-2 py-1 text-[10px] text-stone-400 rounded">
+            たすき受け渡し場所
+          </div>
           <div className="aspect-[4/3] w-full flex items-center justify-center overflow-hidden">
-            <img 
-              src={data.mapImage} 
-              alt={`Map for ${data.section}`} 
+            <img
+              src={data.mapImage}
+              alt={`Map for ${data.section}`}
               className="w-full h-full object-cover opacity-80"
             />
           </div>
-           {/* Floating Action Button for Map */}
-           <a 
-            href={googleMapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 right-4 bg-white text-black font-bold text-xs px-4 py-2 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:scale-105 transition-transform flex items-center gap-2"
-          >
-            <MapPin className="w-3 h-3" />
-            OPEN MAP
-          </a>
+          {/* Floating Action Buttons for Maps */}
+          <div className="absolute bottom-4 right-4 flex flex-col gap-2">
+            {handoverMapsUrl && (
+              <a
+                href={handoverMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-black font-bold text-[10px] px-3 py-2 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:scale-105 transition-transform flex items-center gap-1.5"
+              >
+                <MapPin className="w-3 h-3" />
+                受け渡し場所
+              </a>
+            )}
+            <a
+              href={startMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-stone-800 text-white font-bold text-[10px] px-3 py-2 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:scale-105 transition-transform flex items-center gap-1.5 border border-stone-600"
+            >
+              <MapPin className="w-3 h-3" />
+              出発場所
+            </a>
+          </div>
         </div>
 
         <div className="p-5 space-y-8">

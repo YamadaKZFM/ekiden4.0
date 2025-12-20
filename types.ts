@@ -21,7 +21,8 @@ export interface RelaySection {
   description: string; // Course notes
   mapImage: string; // Path to local image (たすき受け渡し場所)
   routeImages?: string[]; // Route guide images (ルート案内画像)
-  coordinates: string; // Lat,Lng string for Google Maps
+  coordinates: string; // 出発場所 (Start point for Google Maps)
+  handoverCoordinates?: string; // たすき受け渡し場所 (Handover point for Google Maps)
   logistics: string; // Parking/Car info
   timeEstimation?: string; // e.g., "7:30 - 8:40"
   spotLinks?: SpotLink[]; // Links to water stations, cheer spots, photo spots
