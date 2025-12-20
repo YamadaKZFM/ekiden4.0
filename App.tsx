@@ -34,13 +34,28 @@ const App: React.FC = () => {
         </div>
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-4">
-          {/* NCA Logo - Larger with glow effect */}
-          <div className="mb-2 relative">
-            <div className="absolute inset-0 blur-2xl bg-white/10 rounded-full scale-150"></div>
+          {/* Logo Row with Circle Design */}
+          <div className="mb-2 flex items-center justify-center gap-4">
+            {/* Left Circle Design */}
             <img
-              src="./images/nca_logo.jpg"
-              alt="NCA"
-              className="h-20 w-auto object-contain relative z-10 drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]"
+              src="./images/circle_design.png"
+              alt=""
+              className="h-16 w-16 object-contain opacity-60"
+            />
+            {/* NCA Logo - Center with glow effect */}
+            <div className="relative">
+              <div className="absolute inset-0 blur-2xl bg-white/10 rounded-full scale-150"></div>
+              <img
+                src="./images/nca_logo.jpg"
+                alt="NCA"
+                className="h-16 w-auto object-contain relative z-10 drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]"
+              />
+            </div>
+            {/* Right Circle Design */}
+            <img
+              src="./images/circle_design.png"
+              alt=""
+              className="h-16 w-16 object-contain opacity-60"
             />
           </div>
           <span className="text-[10px] font-bold tracking-[0.5em] text-stone-400 uppercase">
@@ -211,12 +226,28 @@ const App: React.FC = () => {
             <div className="absolute w-32 h-32 rounded-full border border-white animate-spin" style={{ animationDuration: '20s' }}></div>
           </div>
 
-          <div className="relative z-10 mb-4 group">
-            <div className="absolute inset-0 blur-xl bg-white/5 rounded-full scale-150 group-hover:bg-white/10 transition-all"></div>
+          {/* Logo Row with Circle Design */}
+          <div className="relative z-10 mb-4 flex items-center justify-center gap-3 group">
+            {/* Left Circle Design */}
             <img
-              src="./images/nca_logo.jpg"
-              alt="NCA"
-              className="h-12 w-auto object-contain relative z-10 opacity-60 group-hover:opacity-100 transition-opacity drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+              src="./images/circle_design.png"
+              alt=""
+              className="h-10 w-10 object-contain opacity-40 group-hover:opacity-60 transition-opacity"
+            />
+            {/* NCA Logo - Center */}
+            <div className="relative">
+              <div className="absolute inset-0 blur-xl bg-white/5 rounded-full scale-150 group-hover:bg-white/10 transition-all"></div>
+              <img
+                src="./images/nca_logo.jpg"
+                alt="NCA"
+                className="h-10 w-auto object-contain relative z-10 opacity-60 group-hover:opacity-100 transition-opacity drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+              />
+            </div>
+            {/* Right Circle Design */}
+            <img
+              src="./images/circle_design.png"
+              alt=""
+              className="h-10 w-10 object-contain opacity-40 group-hover:opacity-60 transition-opacity"
             />
           </div>
           <p className="text-[10px] text-stone-600 uppercase tracking-widest relative z-10">
