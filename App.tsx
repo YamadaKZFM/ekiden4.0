@@ -3,7 +3,7 @@ import { RELAY_DATA } from './constants';
 import { RelaySection } from './types';
 import { SectionCard } from './components/SectionCard';
 import { DetailModal } from './components/DetailModal';
-import { Map, Zap, HeartHandshake, MapPin, Clock, Banknote, ChevronDown } from 'lucide-react';
+import { Map, Zap, HeartHandshake, MapPin, Clock, Banknote, ChevronDown, Instagram } from 'lucide-react';
 
 const App: React.FC = () => {
   const [selectedSection, setSelectedSection] = useState<RelaySection | null>(null);
@@ -86,12 +86,61 @@ const App: React.FC = () => {
         </div>
 
         {RELAY_DATA.map((item) => (
-          <SectionCard 
-            key={item.id} 
-            data={item} 
-            onClick={setSelectedSection} 
+          <SectionCard
+            key={item.id}
+            data={item}
+            onClick={setSelectedSection}
           />
         ))}
+
+        {/* Pace Maker Section */}
+        <div className="mt-6 bg-stone-950 border border-stone-800 p-5 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 blur-3xl -mr-10 -mt-10 rounded-full"></div>
+
+          <div className="flex items-center gap-2 mb-4">
+            <div className="inline-block bg-purple-500/20 text-purple-300 text-[10px] font-bold px-2 py-1 uppercase tracking-wider border border-purple-500/30">
+              Pace Maker
+            </div>
+            <span className="text-[10px] text-stone-500">🚴 自転車リード</span>
+          </div>
+
+          <div className="flex gap-4 items-start">
+            <div className="w-20 h-20 bg-stone-800 rounded-full overflow-hidden flex-shrink-0 border-2 border-purple-500/30">
+              <img
+                src="./images/akiho.jpg"
+                alt="家所陽帆"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-white font-bold text-lg leading-tight">家所 陽帆</h3>
+              <p className="text-[10px] text-purple-300 font-mono mb-2">IEDOKORO AKIHO</p>
+              <div className="flex flex-wrap items-center gap-2 text-[10px] text-stone-500 mb-2">
+                <span>神田外語大学</span>
+                <span>•</span>
+                <span>4年</span>
+                <span>•</span>
+                <span>ESFJ</span>
+              </div>
+              <a
+                href="https://instagram.com/iedokokoko"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-[10px] text-stone-400 hover:text-white transition-colors"
+              >
+                <Instagram className="w-3 h-3" />
+                @iedokokoko
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-4 pt-3 border-t border-stone-800">
+            <p className="text-xs text-stone-400 leading-relaxed">
+              100kmを毎日走るくらいで気づけば最速男。世界を自転車で駆け巡る冒険家で、チームの安心感も抜群。
+              <span className="text-purple-300 font-medium">1日中自転車でランナーをリードしてくれます！</span>
+            </p>
+          </div>
+        </div>
 
         {/* Divider */}
         <div className="py-10 flex flex-col items-center opacity-50 gap-2">
