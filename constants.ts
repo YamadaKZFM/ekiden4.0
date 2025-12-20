@@ -344,6 +344,7 @@ export const RELAY_DATA: RelaySection[] = [
     timeEstimation: "17:50 - 19:00",
     description: "新ハツ山橋直進。芝公園あたりで東京タワーをバックに。合流から一緒に走れたらありがたい。約1キロ",
     mapImage: "./images/map_sec11.jpg",
+    routeImages: ["./images/route_sec10.jpg"],
     coordinates: "35°41'6.1454\"N 139°45'49.2754\"E",
     logistics: "日本橋から全員ジョイン。合流から一緒に走れたらありがたい"
   }
