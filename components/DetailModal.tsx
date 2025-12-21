@@ -75,15 +75,17 @@ export const DetailModal: React.FC<DetailModalProps> = ({ data, onClose }) => {
                 受け渡し場所
               </a>
             )}
-            <a
-              href={startMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-stone-800 text-white font-bold text-[10px] px-3 py-2 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:scale-105 transition-transform flex items-center gap-1.5 border border-stone-600"
-            >
-              <MapPin className="w-3 h-3" />
-              出発場所
-            </a>
+            {data.coordinates && (
+              <a
+                href={startMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-stone-800 text-white font-bold text-[10px] px-3 py-2 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:scale-105 transition-transform flex items-center gap-1.5 border border-stone-600"
+              >
+                <MapPin className="w-3 h-3" />
+                出発場所
+              </a>
+            )}
           </div>
         </div>
 

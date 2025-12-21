@@ -28,7 +28,7 @@ export const RELAY_DATA: RelaySection[] = [
     timeEstimation: "7:30 - 8:40",
     description: "細道のぼり。箱根ホテル小涌園前・登りの様子に注意。",
     mapImage: "./images/map_sec1.jpg",
-    coordinates: "35°13'24.281\"N 139°1'41.9801\"E",
+    coordinates: "",
     logistics: "【AB→車へ】スタート地点の公営駐車場を利用。TARO号が選手回収。",
     spotLinks: [
       { label: "給水所/応援スポット", url: "https://x.gd/UsvNv" }
@@ -59,7 +59,7 @@ export const RELAY_DATA: RelaySection[] = [
     timeEstimation: "8:40 - 9:40",
     description: "細道下りスリップ注意。宮ノ下/湯本の街並み・大平台ヘアピンカーブ。トイレ有",
     mapImage: "./images/map_sec2.jpg",
-    coordinates: "35°14'15.445\"N 139°6'59.8576\"E",
+    coordinates: "35°14'24.5\"N 139°03'12.7\"E",
     logistics: "【CD→車へ】KODAI号、TARO号待機。",
     spotLinks: [
       { label: "給水所/応援スポット", url: "https://x.gd/uUmz7" }
@@ -96,7 +96,7 @@ export const RELAY_DATA: RelaySection[] = [
     timeEstimation: "9:40 - 10:30",
     description: "3人のため歩行者注意。小田原城をバックに・酒匂橋。",
     mapImage: "./images/map_sec3.jpg",
-    coordinates: "35°16'13.2362\"N 139°11'44.6456\"E",
+    coordinates: "35°14'45.1\"N 139°07'48.3\"E",
     logistics: "【EF→車へ】3区であいみさきがKODAI号になる。（ふみ陸と交代させる）",
     spotLinks: [
       { label: "給水所/応援スポット", url: "https://x.gd/rqkl2" }
@@ -126,7 +126,7 @@ export const RELAY_DATA: RelaySection[] = [
     timeEstimation: "10:30 - 11:40",
     description: "長者町信号左折。写真通りに直進・浜須賀信号左。海パック。",
     mapImage: "./images/map_sec4.jpg",
-    coordinates: "35°19'16.7822\"N 139°13'41.6762\"E",
+    coordinates: "35°16'52.0\"N 139°13'01.6\"E",
     logistics: "【GH→車へ】K, K、はるの、咲良、ふみ、りくはホテルで拾ってもらう。",
     spotLinks: [
       { label: "写真スポット", url: "https://x.gd/uFCT3" },
@@ -158,7 +158,7 @@ export const RELAY_DATA: RelaySection[] = [
     description: "写真通りに直進・浜須賀信号左。湘南大橋。",
     mapImage: "./images/map_sec5.jpg",
     routeImages: ["./images/route_sec5.jpg"],
-    coordinates: "35°19'13.9048\"N 139°25'36.7018\"E",
+    coordinates: "35°18'51.7\"N 139°19'55.6\"E",
     logistics: "【IJ→車へ】U→車へ。",
     spotLinks: [
       { label: "写真スポット", url: "https://x.gd/75j8V" },
@@ -189,7 +189,7 @@ export const RELAY_DATA: RelaySection[] = [
     timeEstimation: "12:55 - 13:40",
     description: "歩道橋を避けるために右側を長く走る・藤沢跨線橋（車は上、進行寺坂）。",
     mapImage: "./images/map_sec6.jpg",
-    coordinates: "35°20'59.0971\"N 139°29'12.6809\"E",
+    coordinates: "35°20'05.0\"N 139°27'55.1\"E",
     logistics: "【KL→車へ】シンジ号、こうすけ、はな、ふうか、拓巳、ノゾミ、さき、タイヨウ。",
     spotLinks: [
       { label: "給水所/応援スポット", url: "https://x.gd/LAAIu" }
@@ -220,7 +220,7 @@ export const RELAY_DATA: RelaySection[] = [
     description: "一番心配な区間。給水所前（旧東海道）。歩道が上。",
     mapImage: "./images/map_sec7.jpg",
     routeImages: ["./images/route_sec6_5_1.jpg", "./images/route_sec6_5_2.jpg"],
-    coordinates: "35°24'10.5383\"N 139°31'3.086\"E",
+    coordinates: "35°22'20.6\"N 139°30'07.0\"E",
     logistics: "【MN→車へ】りさ、SHOHEI、辻堂でK,Tシンジ号が合流。",
     spotLinks: [
       { label: "写真スポット", url: "https://x.gd/rhb02u" },
@@ -252,7 +252,7 @@ export const RELAY_DATA: RelaySection[] = [
     description: "写真通りに直進。保土ヶ谷駅の街並み。",
     mapImage: "./images/map_sec8.jpg",
     routeImages: ["./images/route_sec7.jpg"],
-    coordinates: "35°26'19.788\"N 139°35'6.1012\"E",
+    coordinates: "35°25'15.3\"N 139°33'10.7\"E",
     logistics: "【OP→車へ】8→9から、shinji号チームは全員電車。しんじは車を置きに帰る。",
     spotLinks: [
       { label: "写真スポット", url: "https://x.gd/11M_JW" }
@@ -282,7 +282,7 @@ export const RELAY_DATA: RelaySection[] = [
     timeEstimation: "15:30 - 16:40",
     description: "青木通り信号歩道橋渡右・鶴見駅信号横断歩道進め。前日温泉、鶴見駅前あたり。",
     mapImage: "./images/map_sec9.jpg",
-    coordinates: "35°31'42.9308\"N 139°42'6.5678\"E",
+    coordinates: "35°27'53.6\"N 139°37'24.2\"E",
     logistics: "【QR→電車】QR→電車。"
   },
   {
@@ -310,7 +310,7 @@ export const RELAY_DATA: RelaySection[] = [
     description: "六郷橋を渡り階段下る・六郷橋北詰交差点左・大森警察署前。六郷橋。",
     mapImage: "./images/map_sec10.jpg",
     routeImages: ["./images/route_sec9.jpg"],
-    coordinates: "35°32'29.8417\"N 139°41'57.1405\"E",
+    coordinates: "35°31'48.6\"N 139°42'16.5\"E",
     logistics: "電車で先回りで日本橋で下ろしてもらう。"
   },
   {
@@ -345,7 +345,7 @@ export const RELAY_DATA: RelaySection[] = [
     description: "新ハツ山橋直進。芝公園あたりで東京タワーをバックに。合流から一緒に走れたらありがたい。約1キロ",
     mapImage: "./images/map_sec11.jpg",
     routeImages: ["./images/route_sec10.jpg"],
-    coordinates: "35°41'6.1454\"N 139°45'49.2754\"E",
+    coordinates: "35°37'06.2\"N 139°44'26.5\"E",
     logistics: "日本橋から全員ジョイン。合流から一緒に走れたらありがたい"
   }
 ];
