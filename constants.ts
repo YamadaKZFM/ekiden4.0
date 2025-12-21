@@ -130,7 +130,7 @@ export const RELAY_DATA: RelaySection[] = [
     logistics: "【GH→車へ】K, K、はるの、咲良、ふみ、りくはホテルで拾ってもらう。",
     spotLinks: [
       { label: "写真スポット", url: "https://x.gd/uFCT3" },
-      { label: "給水所/応援スポット", url: "https://x.gd/7BQ0T" }
+      { label: "給水所/応援スポット", url: "https://maps.app.goo.gl/UdB5zCSVHCD1K5EW9?g_st=ic" }
     ]
   },
   {
